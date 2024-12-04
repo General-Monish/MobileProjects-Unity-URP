@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI counttxt;
     public GameObject gameWintxt;
     public GameObject gamelosetxt;
+    public GameObject restartbtn;
 
     private Rigidbody rb;
     int count;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         Score();
         gameWintxt.SetActive(false);
         gamelosetxt.SetActive(false);
+        restartbtn.SetActive(false);
     }
 
     void FixedUpdate()
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
             gamelosetxt.SetActive(true);
+            restartbtn.SetActive(true);
         }
     }
 
